@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>ByeCar</title>
+  </head>
+  <body>
+    <nav>
+      <img src="logoDNC.svg" id="logoDNC" alt="" />
+      <h1>ByeCar</h1>
+    </nav>
+    <main class="main-content">
+      <section class="left-content">
+        <h2 class="h2">
+          Ter <span class="destaque"> uma moto </span> por assinatura nunca foi
+          tão fácil!
+        </h2>
+        <img src="motoImage.svg" id="motoImage" alt="" />
+      </section>
+      <section class="right-content">
+        <h2 class="h2">
+          Conheça nossas <span id="destaqueLight">motos</span>!
+        </h2>
+        <div class="carousel">
+          <div
+            data-js="carousel__item"
+            class="carousel__item carousel__item--visible"
+          >
+            <p class="nameMoto">Scooter Elétrica Voltz EV1</p>
+            <img src="moto1.svg" />
+            <div id="valorAbaixo">
+              <p>
+                A partir de<br />
+                <span id="valor">R$ 619,90</span><br />
+                Plano de 30 meses
+              </p>
+            </div>
+          </div>
+
+          <div data-js="carousel__item" class="carousel__item">
+            <p class="nameMoto">Honda CB 500X</p>
+            <img src="moto2.svg" />
+            <div id="valorAbaixo">
+              <p>
+                A partir de<br />
+                <span id="valor">R$ 619,90</span><br />
+                Plano de 30 meses
+              </p>
+            </div>
+          </div>
+
+          <div class="carousel__actions">
+            <button
+              data-js="carousel__button--prev"
+              aria-label="Slide anterior"
+            >
+              <
+            </button>
+
+            <button data-js="carousel__button--next" aria-label="Próximo slide">
+              >
+            </button>
+          </div>
+        </div>
+        <div data-js="carousel__SM" class="carousel__SM">
+          <button id="buttonSM">Saiba Mais</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  box-sizing: border-box;
+  height: 5rem;
+  background-color: #303030;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+}
+
+#logoDNC {
+  height: 6rem;
+  max-width: 10%;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+.right-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+.carousel {
+  overflow: hidden;
+  max-width: 600px;
+  position: relative;
+  background-color: rgba(77, 188, 233, 0.75);
+  border-radius: 15px;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+  display: none;
+}
+
+.carousel .carousel__item img {
+  width: 30rem;
+  height: 20rem;
+}
+.carousel__item {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  color: #ffffff;
+}
+.nameMoto {
+  font-weight: bold;
+}
+#valorAbaixo {
+  padding-bottom: 1.5rem;
+}
+
+#valor {
+  background-color: white;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #265e70;
+  border-radius: 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.carousel .carousel__item--visible {
+  display: block;
+  animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel__actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #265e70;
+}
+
+.carousel .carousel__actions button[data-js="carousel__button--prev"] {
+  margin-left: 20px;
+}
+
+.carousel .carousel__actions button[data-js="carousel__button--next"] {
+  margin-right: 20px;
+}
+
+#motoImage {
+  width: 70%;
+}
+
+.destaque {
+  font-weight: bold;
+}
+
+.h2 {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  color: #265e70;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  width: 90%;
+}
+
+#destaqueLight {
+  color: #4dbce9;
+}
+
+#buttonSM {
+  background: #4dbce9;
+  border-radius: 15px;
+  height: 5rem;
+  width: 50%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.7rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel__SM {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
+}
