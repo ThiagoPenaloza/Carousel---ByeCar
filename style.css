@@ -34,6 +34,21 @@ nav {
   max-width: 10%;
 }
 
+#motoImage {
+  width: 73%;
+  position: relative;
+  bottom: 7rem;
+}
+
+#moto1 {
+  width: 27rem;
+}
+
+#moto2 {
+  width: 40rem;
+  padding-bottom: 3rem;
+}
+
 .main-content {
   display: flex;
   justify-content: space-between;
@@ -135,10 +150,6 @@ nav {
   margin-right: 20px;
 }
 
-#motoImage {
-  width: 70%;
-}
-
 .destaque {
   font-weight: bold;
 }
@@ -150,9 +161,9 @@ nav {
   font-size: 3rem;
   text-align: center;
   color: #265e70;
-  padding-bottom: 3rem;
   padding-left: 2rem;
   width: 90%;
+  padding-bottom: 3.5rem;
 }
 
 #destaqueLight {
@@ -178,6 +189,90 @@ nav {
   display: flex;
   justify-content: center;
   padding-top: 3rem;
+}
+
+.moto-info {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: rgba(77, 188, 233);
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  max-height: 100%;
+}
+.moto-info--visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease-in-out;
+  animation: 0.5s;
+  max-height: 100%;
+}
+
+.moto-info--visible h3 {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  position: relative;
+  left: 2rem;
+}
+.moto-info--visible p {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #ffffff;
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+  position: relative;
+  left: 2rem;
+}
+
+.moto-info--visible button#assignButton {
+  background: #ffffff;
+  border-radius: 15px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #265e70;
+  width: 25rem;
+  height: 5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-moto {
+  display: flex;
+  flex-direction: row;
+}
+.close-button {
+  background-color: transparent;
+  border: none;
+  flex-basis: 5%;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.modal-open {
+  filter: blur(5px);
+  transition: filter 0.5s ease-out;
+  box-shadow: none;
 }
 
 @keyframes fadeVisibility {
