@@ -29,6 +29,7 @@ prevButton.addEventListener("click", () => {
   const correctSlideIndex =
     currentSlideIndex === 0
       ? (currentSlideIndex = lastSlideIndex)
+
       : --currentSlideIndex;
 
   manipulateSlidesClasses(correctSlideIndex);
@@ -64,19 +65,27 @@ smButton.addEventListener("click", () => {
     `;
 
   motoInfo.classList.add("moto-info--visible");
-
+  motoInfo.classList.remove("fade-out");
   const closeButton = document.querySelector('[data-js="close-button"]');
 
   closeButton.addEventListener("click", () => {
-    main.classList.remove("modal-open");
-    nav.classList.remove("modal-open");
-    motoInfo.remove();
+    motoInfo.classList.add("fade-out");
+    main.classList.add("blur-out");
+    nav.classList.add("blur-out");
+    setTimeout(() => {
+
+      main.classList.remove("modal-open");
+      nav.classList.remove("modal-open");
+      motoInfo.remove();
+    }, 500)
   });
 });
 
 const body = document.querySelector("body");
 
 saibaMaisButton.addEventListener("click", () => {
+  main.classList.remove("blur-out");
+  nav.classList.remove("blur-out");
   main.classList.add("modal-open");
   nav.classList.add("modal-open");
   body.appendChild(motoInfo);
